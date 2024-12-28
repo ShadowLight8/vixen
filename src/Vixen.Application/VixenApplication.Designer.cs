@@ -34,12 +34,12 @@ namespace VixenApplication
 		private void InitializeComponent()
 		{
 			components = new Container();
-			ListViewItem listViewItem1 = new ListViewItem("asdfadsa");
-			ListViewItem listViewItem2 = new ListViewItem("rewqrewq");
-			ListViewItem listViewItem3 = new ListViewItem("vbcbxvxc");
-			ListViewItem listViewItem4 = new ListViewItem("gfdsgfsd");
-			ListViewItem listViewItem5 = new ListViewItem("ytreyre");
-			ListViewItem listViewItem6 = new ListViewItem("xvcbxvcx");
+			ListViewItem listViewItem7 = new ListViewItem("asdfadsa");
+			ListViewItem listViewItem8 = new ListViewItem("rewqrewq");
+			ListViewItem listViewItem9 = new ListViewItem("vbcbxvxc");
+			ListViewItem listViewItem10 = new ListViewItem("gfdsgfsd");
+			ListViewItem listViewItem11 = new ListViewItem("ytreyre");
+			ListViewItem listViewItem12 = new ListViewItem("xvcbxvcx");
 			ComponentResourceManager resources = new ComponentResourceManager(typeof(VixenApplication));
 			contextMenuStripNewSequence = new ContextMenuStrip(components);
 			openFileDialog = new OpenFileDialog();
@@ -73,20 +73,21 @@ namespace VixenApplication
 			buttonOpenSequence = new Button();
 			buttonNewSequence = new Button();
 			groupBoxSystemConfig = new GroupBox();
-			pictureBox1 = new PictureBox();
-			tableLayoutPanel1 = new TableLayoutPanel();
+			tableLayoutPanel4 = new TableLayoutPanel();
 			buttonSetupOutputPreviews = new Button();
 			buttonSetupDisplay = new Button();
-			tableLayoutPanel4 = new TableLayoutPanel();
+			pictureBox1 = new PictureBox();
+			tableLayoutPanel1 = new TableLayoutPanel();
+			buttonPOCNotify = new Button();
 			menuStripMain.SuspendLayout();
 			contextMenuStripRecent.SuspendLayout();
 			statusStrip.SuspendLayout();
 			groupBoxSequences.SuspendLayout();
 			tableLayoutPanel2.SuspendLayout();
 			groupBoxSystemConfig.SuspendLayout();
+			tableLayoutPanel4.SuspendLayout();
 			((ISupportInitialize)pictureBox1).BeginInit();
 			tableLayoutPanel1.SuspendLayout();
-			tableLayoutPanel4.SuspendLayout();
 			SuspendLayout();
 			// 
 			// contextMenuStripNewSequence
@@ -285,7 +286,7 @@ namespace VixenApplication
 			progressBar.Size = new Size(453, 33);
 			progressBar.TabIndex = 17;
 			progressBar.TextColor = Color.Black;
-			progressBar.TextFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+			progressBar.TextFont = new Font("Segoe UI", 9F);
 			progressBar.VisualMode = Common.Controls.ProgressBarDisplayMode.CustomText;
 			// 
 			// groupBoxSequences
@@ -333,7 +334,7 @@ namespace VixenApplication
 			listViewRecentSequences.ForeColor = Color.FromArgb(221, 221, 221);
 			listViewRecentSequences.FullRowSelect = true;
 			listViewRecentSequences.HeaderStyle = ColumnHeaderStyle.None;
-			listViewRecentSequences.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6 });
+			listViewRecentSequences.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8, listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
 			listViewRecentSequences.Location = new Point(4, 97);
 			listViewRecentSequences.Margin = new Padding(4, 5, 4, 5);
 			listViewRecentSequences.MultiSelect = false;
@@ -407,43 +408,30 @@ namespace VixenApplication
 			groupBoxSystemConfig.Margin = new Padding(4, 5, 4, 5);
 			groupBoxSystemConfig.Name = "groupBoxSystemConfig";
 			groupBoxSystemConfig.Padding = new Padding(4, 5, 4, 5);
-			groupBoxSystemConfig.Size = new Size(222, 106);
+			groupBoxSystemConfig.Size = new Size(222, 143);
 			groupBoxSystemConfig.TabIndex = 1;
 			groupBoxSystemConfig.TabStop = false;
 			groupBoxSystemConfig.Text = "System Configuration";
 			groupBoxSystemConfig.Paint += groupBoxes_Paint;
 			// 
-			// pictureBox1
+			// tableLayoutPanel4
 			// 
-			tableLayoutPanel1.SetColumnSpan(pictureBox1, 2);
-			pictureBox1.Dock = DockStyle.Fill;
-			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(4, 5);
-			pictureBox1.Margin = new Padding(4, 5, 4, 5);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(451, 153);
-			pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-			pictureBox1.TabIndex = 14;
-			pictureBox1.TabStop = false;
-			// 
-			// tableLayoutPanel1
-			// 
-			tableLayoutPanel1.ColumnCount = 2;
-			tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-			tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-			tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
-			tableLayoutPanel1.Controls.Add(groupBoxSystemConfig, 1, 1);
-			tableLayoutPanel1.Controls.Add(groupBoxSequences, 0, 1);
-			tableLayoutPanel1.Controls.Add(progressBar, 0, 2);
-			tableLayoutPanel1.Dock = DockStyle.Fill;
-			tableLayoutPanel1.Location = new Point(0, 25);
-			tableLayoutPanel1.Name = "tableLayoutPanel1";
-			tableLayoutPanel1.RowCount = 3;
-			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 58.90477F));
-			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.761906F));
-			tableLayoutPanel1.Size = new Size(459, 490);
-			tableLayoutPanel1.TabIndex = 18;
+			tableLayoutPanel4.AutoSize = true;
+			tableLayoutPanel4.ColumnCount = 1;
+			tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+			tableLayoutPanel4.Controls.Add(buttonPOCNotify, 0, 2);
+			tableLayoutPanel4.Controls.Add(buttonSetupOutputPreviews, 0, 1);
+			tableLayoutPanel4.Controls.Add(buttonSetupDisplay, 0, 0);
+			tableLayoutPanel4.Dock = DockStyle.Fill;
+			tableLayoutPanel4.Location = new Point(4, 21);
+			tableLayoutPanel4.Name = "tableLayoutPanel4";
+			tableLayoutPanel4.RowCount = 3;
+			tableLayoutPanel4.RowStyles.Add(new RowStyle());
+			tableLayoutPanel4.RowStyles.Add(new RowStyle());
+			tableLayoutPanel4.RowStyles.Add(new RowStyle());
+			tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+			tableLayoutPanel4.Size = new Size(214, 117);
+			tableLayoutPanel4.TabIndex = 19;
 			// 
 			// buttonSetupOutputPreviews
 			// 
@@ -483,21 +471,55 @@ namespace VixenApplication
 			buttonSetupDisplay.MouseLeave += buttonBackground_MouseLeave;
 			buttonSetupDisplay.MouseHover += buttonBackground_MouseHover;
 			// 
-			// tableLayoutPanel4
+			// pictureBox1
 			// 
-			tableLayoutPanel4.AutoSize = true;
-			tableLayoutPanel4.ColumnCount = 1;
-			tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-			tableLayoutPanel4.Controls.Add(buttonSetupOutputPreviews, 0, 1);
-			tableLayoutPanel4.Controls.Add(buttonSetupDisplay, 0, 0);
-			tableLayoutPanel4.Dock = DockStyle.Fill;
-			tableLayoutPanel4.Location = new Point(4, 21);
-			tableLayoutPanel4.Name = "tableLayoutPanel4";
-			tableLayoutPanel4.RowCount = 2;
-			tableLayoutPanel4.RowStyles.Add(new RowStyle());
-			tableLayoutPanel4.RowStyles.Add(new RowStyle());
-			tableLayoutPanel4.Size = new Size(214, 80);
-			tableLayoutPanel4.TabIndex = 19;
+			tableLayoutPanel1.SetColumnSpan(pictureBox1, 2);
+			pictureBox1.Dock = DockStyle.Fill;
+			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+			pictureBox1.Location = new Point(4, 5);
+			pictureBox1.Margin = new Padding(4, 5, 4, 5);
+			pictureBox1.Name = "pictureBox1";
+			pictureBox1.Size = new Size(451, 153);
+			pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+			pictureBox1.TabIndex = 14;
+			pictureBox1.TabStop = false;
+			// 
+			// tableLayoutPanel1
+			// 
+			tableLayoutPanel1.ColumnCount = 2;
+			tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+			tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+			tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
+			tableLayoutPanel1.Controls.Add(groupBoxSystemConfig, 1, 1);
+			tableLayoutPanel1.Controls.Add(groupBoxSequences, 0, 1);
+			tableLayoutPanel1.Controls.Add(progressBar, 0, 2);
+			tableLayoutPanel1.Dock = DockStyle.Fill;
+			tableLayoutPanel1.Location = new Point(0, 25);
+			tableLayoutPanel1.Name = "tableLayoutPanel1";
+			tableLayoutPanel1.RowCount = 3;
+			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 58.90477F));
+			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.761906F));
+			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+			tableLayoutPanel1.Size = new Size(459, 490);
+			tableLayoutPanel1.TabIndex = 18;
+			// 
+			// buttonPOCNotify
+			// 
+			buttonPOCNotify.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+			buttonPOCNotify.AutoSize = true;
+			buttonPOCNotify.BackgroundImageLayout = ImageLayout.Stretch;
+			buttonPOCNotify.FlatAppearance.BorderColor = Color.FromArgb(40, 40, 40);
+			buttonPOCNotify.FlatStyle = FlatStyle.Flat;
+			buttonPOCNotify.ForeColor = Color.FromArgb(221, 221, 221);
+			buttonPOCNotify.Location = new Point(4, 85);
+			buttonPOCNotify.Margin = new Padding(4, 5, 4, 5);
+			buttonPOCNotify.Name = "buttonPOCNotify";
+			buttonPOCNotify.Size = new Size(206, 27);
+			buttonPOCNotify.TabIndex = 5;
+			buttonPOCNotify.Text = "POC Nodify";
+			buttonPOCNotify.UseVisualStyleBackColor = true;
+			buttonPOCNotify.Click += ButtonPOCNotify_Click;
 			// 
 			// VixenApplication
 			// 
@@ -532,11 +554,11 @@ namespace VixenApplication
 			tableLayoutPanel2.PerformLayout();
 			groupBoxSystemConfig.ResumeLayout(false);
 			groupBoxSystemConfig.PerformLayout();
+			tableLayoutPanel4.ResumeLayout(false);
+			tableLayoutPanel4.PerformLayout();
 			((ISupportInitialize)pictureBox1).EndInit();
 			tableLayoutPanel1.ResumeLayout(false);
 			tableLayoutPanel1.PerformLayout();
-			tableLayoutPanel4.ResumeLayout(false);
-			tableLayoutPanel4.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -580,6 +602,7 @@ namespace VixenApplication
 		private TableLayoutPanel tableLayoutPanel4;
 		private Button buttonSetupOutputPreviews;
 		private Button buttonSetupDisplay;
+		private Button buttonPOCNotify;
 	}
 }
 

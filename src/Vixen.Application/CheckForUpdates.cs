@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Net.Http;
 using Common.Controls;
 using Common.Controls.Scaling;
 using Common.Controls.Theme;

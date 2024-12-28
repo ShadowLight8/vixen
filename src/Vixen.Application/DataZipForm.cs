@@ -6,6 +6,7 @@ using NLog;
 using System.ComponentModel;
 using System.IO.Compression;
 using Common.Controls.Scaling;
+using System.IO;
 
 namespace VixenApplication
 {

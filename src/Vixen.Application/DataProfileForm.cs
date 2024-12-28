@@ -3,6 +3,7 @@ using Common.Resources;
 using Common.Resources.Properties;
 using Common.Controls;
 using Common.Controls.Scaling;
+using System.IO;
 
 namespace VixenApplication
 {

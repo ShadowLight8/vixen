@@ -27,6 +27,8 @@ using System.ComponentModel;
 using System.Drawing;
 using Common.WPFCommon.Services;
 using System.Windows.Media;
+using System.IO;
+using System.Net.Http;
 
 namespace VixenApplication
 {
@@ -1460,6 +1462,12 @@ namespace VixenApplication
 
 			// Refresh the dialog 
 			Refresh();
+		}
+
+		private void ButtonPOCNotify_Click(object sender, EventArgs e)
+		{
+			POC_Notify winPOC_Notify = new POC_Notify();
+			winPOC_Notify.Show();
 		}
 	}
 }
