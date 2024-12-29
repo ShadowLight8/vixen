@@ -14,6 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Nodify;
+using Vixen.Module.Controller;
+using Vixen.Services;
+using Vixen.Sys;
+using Vixen.Sys.Output;
 
 namespace VixenApplication
 {
@@ -202,8 +206,59 @@ namespace VixenApplication
 				Location = new System.Windows.Point(200, 50)
 			};
 
-			Nodes.Add(welcome);
-			Nodes.Add(nodify);
+			//Nodes.Add(welcome);
+			//Nodes.Add(nodify);
+
+			// Gets the types on controllers
+			foreach (KeyValuePair<Guid, string> kvp in ApplicationServices.GetAvailableModules<IControllerModuleInstance>())
+			{
+
+			}
+
+			int yOffset = 10;
+			foreach (var item in VixenSystem.OutputControllers)
+			{
+				var controllerNode = new NodeViewModel
+				{
+					Title = item.Name,
+					Output = new ObservableCollection<ConnectorViewModel>
+					{
+						new ConnectorViewModel
+						{
+							Title = item.OutputCount.ToString()
+						}
+					},
+					Location = new System.Windows.Point(10, yOffset)
+				};
+				Nodes.Add(controllerNode);
+				yOffset += 60;
+			}
+
+			yOffset = 10;
+			foreach (ElementNode element in VixenSystem.Nodes.GetRootNodes())
+			{
+				var rootNode = new NodeViewModel
+				{
+					Title = element.Name,
+					Input = new ObservableCollection<ConnectorViewModel>
+					{
+						new ConnectorViewModel
+						{
+							Title = element.Children.Count().ToString()
+						}
+					},
+					Output = new ObservableCollection<ConnectorViewModel>
+					{
+						new ConnectorViewModel
+						{
+							Title = "Out"
+						}
+					},
+					Location = new System.Windows.Point(200, yOffset)
+				};
+				Nodes.Add(rootNode);
+				yOffset += 60;
+			}
 
 			//Connections.Add(new ConnectionViewModel(welcome.Output[0], nodify.Input[0]));
 		}

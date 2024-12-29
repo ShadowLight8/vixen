@@ -441,14 +441,15 @@ namespace VixenApplication
 		{
 			buttonNewSequence.Enabled = buttonOpenSequence.Enabled =
 				buttonSetupDisplay.Enabled = buttonSetupOutputPreviews.Enabled = enable;
+			buttonPOCNotify.Enabled = enable;
 			menuStripMain.Enabled = enable;
 		}
 
 		private void RegisterIOC()
 		{
 			var serviceLocator = ServiceLocator.Default;
-			serviceLocator.RegisterType<IDownloadService, DownloadService>(); 
-			serviceLocator.RegisterType<IMessageBoxService, MessageBoxService>(); 
+			serviceLocator.RegisterType<IDownloadService, DownloadService>();
+			serviceLocator.RegisterType<IMessageBoxService, MessageBoxService>();
 		}
 
 		private void VixenApplication_Shown(object sender, EventArgs e)
