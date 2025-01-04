@@ -74,11 +74,11 @@ namespace VixenApplication
 			buttonNewSequence = new Button();
 			groupBoxSystemConfig = new GroupBox();
 			tableLayoutPanel4 = new TableLayoutPanel();
+			buttonPOCNodify = new Button();
 			buttonSetupOutputPreviews = new Button();
 			buttonSetupDisplay = new Button();
 			pictureBox1 = new PictureBox();
 			tableLayoutPanel1 = new TableLayoutPanel();
-			buttonPOCNotify = new Button();
 			menuStripMain.SuspendLayout();
 			contextMenuStripRecent.SuspendLayout();
 			statusStrip.SuspendLayout();
@@ -419,7 +419,7 @@ namespace VixenApplication
 			tableLayoutPanel4.AutoSize = true;
 			tableLayoutPanel4.ColumnCount = 1;
 			tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-			tableLayoutPanel4.Controls.Add(buttonPOCNotify, 0, 2);
+			tableLayoutPanel4.Controls.Add(buttonPOCNodify, 0, 2);
 			tableLayoutPanel4.Controls.Add(buttonSetupOutputPreviews, 0, 1);
 			tableLayoutPanel4.Controls.Add(buttonSetupDisplay, 0, 0);
 			tableLayoutPanel4.Dock = DockStyle.Fill;
@@ -432,6 +432,23 @@ namespace VixenApplication
 			tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
 			tableLayoutPanel4.Size = new Size(214, 117);
 			tableLayoutPanel4.TabIndex = 19;
+			// 
+			// buttonPOCNodify
+			// 
+			buttonPOCNodify.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+			buttonPOCNodify.AutoSize = true;
+			buttonPOCNodify.BackgroundImageLayout = ImageLayout.Stretch;
+			buttonPOCNodify.FlatAppearance.BorderColor = Color.FromArgb(40, 40, 40);
+			buttonPOCNodify.FlatStyle = FlatStyle.Flat;
+			buttonPOCNodify.ForeColor = Color.FromArgb(221, 221, 221);
+			buttonPOCNodify.Location = new Point(4, 85);
+			buttonPOCNodify.Margin = new Padding(4, 5, 4, 5);
+			buttonPOCNodify.Name = "buttonPOCNodify";
+			buttonPOCNodify.Size = new Size(206, 27);
+			buttonPOCNodify.TabIndex = 5;
+			buttonPOCNodify.Text = "POC Nodify";
+			buttonPOCNodify.UseVisualStyleBackColor = true;
+			buttonPOCNodify.Click += ButtonPOCNodify_Click;
 			// 
 			// buttonSetupOutputPreviews
 			// 
@@ -503,23 +520,6 @@ namespace VixenApplication
 			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
 			tableLayoutPanel1.Size = new Size(459, 490);
 			tableLayoutPanel1.TabIndex = 18;
-			// 
-			// buttonPOCNotify
-			// 
-			buttonPOCNotify.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-			buttonPOCNotify.AutoSize = true;
-			buttonPOCNotify.BackgroundImageLayout = ImageLayout.Stretch;
-			buttonPOCNotify.FlatAppearance.BorderColor = Color.FromArgb(40, 40, 40);
-			buttonPOCNotify.FlatStyle = FlatStyle.Flat;
-			buttonPOCNotify.ForeColor = Color.FromArgb(221, 221, 221);
-			buttonPOCNotify.Location = new Point(4, 85);
-			buttonPOCNotify.Margin = new Padding(4, 5, 4, 5);
-			buttonPOCNotify.Name = "buttonPOCNotify";
-			buttonPOCNotify.Size = new Size(206, 27);
-			buttonPOCNotify.TabIndex = 5;
-			buttonPOCNotify.Text = "POC Nodify";
-			buttonPOCNotify.UseVisualStyleBackColor = true;
-			buttonPOCNotify.Click += ButtonPOCNotify_Click;
 			// 
 			// VixenApplication
 			// 
@@ -602,7 +602,7 @@ namespace VixenApplication
 		private TableLayoutPanel tableLayoutPanel4;
 		private Button buttonSetupOutputPreviews;
 		private Button buttonSetupDisplay;
-		private Button buttonPOCNotify;
+		private Button buttonPOCNodify;
 	}
 }
 

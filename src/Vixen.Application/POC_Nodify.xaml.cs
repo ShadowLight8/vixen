@@ -22,11 +22,11 @@ using Vixen.Sys.Output;
 namespace VixenApplication
 {
 	/// <summary>
-	/// Interaction logic for POC_Notify.xaml
+	/// Interaction logic for POC_Nodify.xaml
 	/// </summary>
-	public partial class POC_Notify : Window
+	public partial class POC_Nodify : Window
 	{
-		public POC_Notify()
+		public POC_Nodify()
 		{
 			InitializeComponent();
 		}

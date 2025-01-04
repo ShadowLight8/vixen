@@ -441,7 +441,7 @@ namespace VixenApplication
 		{
 			buttonNewSequence.Enabled = buttonOpenSequence.Enabled =
 				buttonSetupDisplay.Enabled = buttonSetupOutputPreviews.Enabled = enable;
-			buttonPOCNotify.Enabled = enable;
+			buttonPOCNodify.Enabled = enable;
 			menuStripMain.Enabled = enable;
 		}
 
@@ -1465,10 +1465,10 @@ namespace VixenApplication
 			Refresh();
 		}
 
-		private void ButtonPOCNotify_Click(object sender, EventArgs e)
+		private void ButtonPOCNodify_Click(object sender, EventArgs e)
 		{
-			POC_Notify winPOC_Notify = new POC_Notify();
-			winPOC_Notify.Show();
+			POC_Nodify winPOC_Nodify = new POC_Nodify();
+			winPOC_Nodify.Show();
 		}
 	}
 }
