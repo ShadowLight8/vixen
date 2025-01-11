@@ -4,13 +4,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:VixenApplication"
+    xmlns:local1="clr-namespace:Vixen.Sys;assembly=Vixen.Core"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:nodify="clr-namespace:Nodify;assembly=Nodify"
+    xmlns:sys="clr-namespace:System;assembly=System.Runtime"
     Title="POC_Notify"
     Width="800"
-    Height="450"
+    Height="600"
     ResizeMode="CanResizeWithGrip"
     mc:Ignorable="d">
+
+    <Window.DataContext>
+        <local1:VixenSystem />
+    </Window.DataContext>
 
     <Window.Resources>
         <ResourceDictionary>
@@ -115,14 +121,35 @@
             <Border.Background>
                 <SolidColorBrush Opacity="0.7" Color="DimGray" />
             </Border.Background>
-            <TextBlock
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Top"
-                Background="CornflowerBlue"
-                FontSize="12"
-                FontWeight="DemiBold"
-                Text="Controller Shelf"
-                TextAlignment="Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    Background="CornflowerBlue"
+                    FontSize="12"
+                    FontWeight="DemiBold"
+                    Text="Controller Shelf"
+                    TextAlignment="Center" />
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden"> 
+                    <ItemsControl ItemsSource="{Binding OutputControllers}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="x:Type ControllerViewModel">
+                                <nodify:Node Content="{Binding Name}">
+                                    <nodify:Node.Output>
+                                        <CompositeCollection>
+                                            <sys:String>Output</sys:String>
+                                        </CompositeCollection>
+                                    </nodify:Node.Output>
+                                </nodify:Node>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
         </Border>
     </Grid>
 </Window>
